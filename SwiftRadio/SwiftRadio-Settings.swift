@@ -21,7 +21,7 @@ let mainScreentitle = "Sakay Na!"
 // Station Data
 
 let stationName = "Drive Rock Radio"
-let stationStreamURL = "http://173.208.154.18:8020/stream"
+let stationStreamURL = Environment.streamURL.absoluteString
 
 // The file should be present in the asset catalog (Images.xcassets)
 let stationImageURL = "station-driverockradio.png"

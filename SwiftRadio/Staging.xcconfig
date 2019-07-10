@@ -1,0 +1,20 @@
+//
+//  Staging.xcconfig
+//  DriveRockRadio
+//
+//  Created by Celso Barriga on 7/9/19.
+//  Copyright © 2019 celsobarriga.com. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+// Some bogus settings
+ENV = STAGING
+
+// Server URL
+STREAM_URL = http:/$()/173.208.154.18:8020/stream
+
+// App Settings
+APP_NAME = DriveRockRadio (staging)
+APP_BUNDLE_ID = com.celsobarriga.DriveRockRadio.staging

@@ -80,6 +80,10 @@ class NowPlayingViewController: UIViewController {
         
         // Setup Handoff User Activity
         setupHandoffUserActivity()
+        
+        print(Environment.streamURL.absoluteString)
+        print(Environment.envStr)
+
     }
     
     //*****************************************************************
