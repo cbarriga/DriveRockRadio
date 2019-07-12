@@ -70,7 +70,8 @@ class NowPlayingViewController: UIViewController {
         // Set UI
         albumImageView.image = currentTrack.artworkImage
         stationDescLabel.text = currentStation.desc
-        stationDescLabel.isHidden = currentTrack.artworkLoaded
+        //stationDescLabel.isHidden = currentTrack.artworkLoaded
+        stationDescLabel.isHidden = false
         
         // Setup volumeSlider
         setupVolumeSlider()
@@ -79,11 +80,7 @@ class NowPlayingViewController: UIViewController {
         setupRemoteCommandCenter()
         
         // Setup Handoff User Activity
-        setupHandoffUserActivity()
-        
-        print(Environment.streamURL.absoluteString)
-        print(Environment.envStr)
-
+        setupHandoffUserActivity()        
     }
     
     //*****************************************************************
@@ -95,8 +92,10 @@ class NowPlayingViewController: UIViewController {
         
         currentStation = station
         currentTrack = Track(title: station.name, artist: station.desc)
-        currentTrack.artworkImage = UIImage(named: station.imageURL)
         
+        //currentTrack.artworkImage = UIImage(named: station.imageURL)
+        currentTrack.artworkImage = UIImage(named: "station-driverockradio.png")
+
         updateLabels(with: nil, animate: false)
         updateTrackArtwork(with: currentTrack)
     }
@@ -144,15 +143,9 @@ class NowPlayingViewController: UIViewController {
     
     func updateTrackMetadata(with track: Track?) {
         guard let track = track else { return }
-
-        // Hack to cleanup trailing "[???]"
-        let rawValueCleaned = NSMutableString(string: track.title)
-        let pattern = "(\\[.*?\\]\\w*$)"
-        let regex = try! NSRegularExpression(pattern: pattern, options: [])
-        regex.replaceMatches(in: rawValueCleaned , options: .reportProgress, range: NSRange(location: 0, length: rawValueCleaned.length), withTemplate: "")
         
         currentTrack.artist = track.artist
-        currentTrack.title = rawValueCleaned as String
+        currentTrack.title = track.title
         
         updateLabels()
     }

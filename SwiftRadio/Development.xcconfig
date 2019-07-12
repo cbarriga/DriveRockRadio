@@ -16,5 +16,5 @@ ENV = DEVELOPMENT
 STREAM_URL = http:/$()/173.208.154.18:8020/stream
 
 // App Settings
-APP_NAME = DriveRockRadio (development)
+APP_NAME = DRR (development)
 APP_BUNDLE_ID = com.celsobarriga.DriveRockRadio.development

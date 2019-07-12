@@ -19,13 +19,12 @@ let kDebugLog = true
 let mainScreentitle = "Sakay Na!"
 
 // Station Data
-
 let stationName = "Drive Rock Radio"
 let stationStreamURL = Environment.streamURL.absoluteString
 
 // The file should be present in the asset catalog (Images.xcassets)
-let stationImageURL = "station-driverockradio.png"
-//let stationImageURL = "https://www.driverockradio.com/wp-content/uploads/radiologik/art-00.jpg"
+//let stationImageURL = "station-driverockradio.png"
+let stationImageURL = "https://www.driverockradio.com/wp-content/uploads/static/station-driverock.png"
 let stationDesc = "Sakay Na!"
 let stationlongDesc = """
 Bridging Filipino Overseas Foreign Workers (OFW) and expats from all street corners worldwide, Drive Rock Radio is the latest internet radio station, bringing listeners closer to each other.

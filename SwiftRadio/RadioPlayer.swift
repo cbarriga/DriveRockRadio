@@ -92,7 +92,6 @@ class RadioPlayer {
     //*****************************************************************
     
     private func getStationImage(from station: RadioStation, completionHandler: @escaping (_ image: UIImage) -> ()) {
-        
         if station.imageURL.range(of: "http") != nil {
             // load current station image from network
             ImageLoader.sharedLoader.imageForUrl(urlString: station.imageURL) { (image, stringURL) in
@@ -122,9 +121,16 @@ extension RadioPlayer: FRadioPlayerDelegate {
             let trackName = trackName, !trackName.isEmpty else {
                 resetTrack(with: station)
                 return
-        }
+            }
         
-        updateTrackMetadata(artistName: artistName, trackName: trackName)
+        // HACK to clean up [???] at the end of the track name
+        let trackCleaned = NSMutableString(string: trackName)
+        let pattern = "(\\[.*?\\]\\w*$)"
+        let regex = try! NSRegularExpression(pattern: pattern, options: [])
+        regex.replaceMatches(in: trackCleaned , options: .reportProgress, range: NSRange(location: 0, length: trackCleaned.length), withTemplate: "")
+        
+        updateTrackMetadata(artistName: artistName, trackName: trackCleaned as String)
+        //updateTrackMetadata(artistName: artistName, trackName: trackName)
     }
     
     func radioPlayer(_ player: FRadioPlayer, artworkDidChange artworkURL: URL?) {

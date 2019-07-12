@@ -26,6 +26,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FRadioPlayer.shared.enableArtwork = true
         FRadioPlayer.shared.artworkSize = 600
         
+        if kDebugLog {
+            print(Environment.streamURL.absoluteString)
+            print(Environment.envStr)
+        }
+
         return true
     }
 

@@ -16,5 +16,5 @@ ENV = STAGING
 STREAM_URL = http:/$()/173.208.154.18:8020/stream
 
 // App Settings
-APP_NAME = DriveRockRadio (staging)
+APP_NAME = DRR (staging)
 APP_BUNDLE_ID = com.celsobarriga.DriveRockRadio.staging
