@@ -13,7 +13,8 @@
 ENV = DEVELOPMENT
 
 // Server URL
-STREAM_URL = http:/$()/173.208.154.18:8020/stream
+STREAM_URL = http:/$()/173.208.154.18:8020/stream   // DRR
+//STREAM_URL = http:/$()/151.80.42.191:8080/stream // Destiny
 
 // App Settings
 APP_NAME = DRR (development)

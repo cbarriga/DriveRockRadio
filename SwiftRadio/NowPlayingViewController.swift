@@ -17,6 +17,8 @@ class NowPlayingViewController: UIViewController {
     
     // MARK: - Properties
     let radioPlayer = RadioPlayer()
+    
+    var radioLogik = RadioLogik()
 
     // MARK: - IB UI
     
@@ -81,6 +83,49 @@ class NowPlayingViewController: UIViewController {
         
         // Setup Handoff User Activity
         setupHandoffUserActivity()        
+
+        // Get the Radio Stations
+        
+        /*
+        DataManager.getStationDataWithSuccess() { (data) in
+            
+            // Turn off network indicator in status bar
+            defer {
+                DispatchQueue.main.async { UIApplication.shared.isNetworkActivityIndicatorVisible = false }
+            }
+            
+            if kDebugLog { print("Radiologik JSON Found") }
+            
+            
+            guard let data = data, let jsonDictionary = try? JSONDecoder().decode(RadioLogik.self, from: data) else {
+                if kDebugLog { print("JSON Station Loading Error") }
+                return
+            }
+ 
+            
+            /*
+            do {
+                let data = data
+                let decoded = try JSONDecoder().decode(RadioLogik.self, from: data!)
+                print(decoded)
+            } catch let err {
+                print("\n\n===========Error===========")
+                print("Error Code: \(err._code)")
+                print("Error Messsage: \(err.localizedDescription)")
+                if let data = data, let str = String(data: data, encoding: String.Encoding.utf8){
+                    print("Server Error: " + str)
+                }
+                debugPrint(err)
+                print("===========================\n\n")
+                
+            }
+            */
+            
+            print(jsonDictionary)
+            self.radioLogik = jsonDictionary
+ 
+        }
+        */
     }
     
     //*****************************************************************

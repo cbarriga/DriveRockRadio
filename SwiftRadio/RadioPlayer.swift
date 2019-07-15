@@ -134,10 +134,30 @@ extension RadioPlayer: FRadioPlayerDelegate {
     }
     
     func radioPlayer(_ player: FRadioPlayer, artworkDidChange artworkURL: URL?) {
-        guard let artworkURL = artworkURL else { resetArtwork(with: station); return }
+        guard let artworkURL = artworkURL else {
+            if player.isPlaying {
+                // Try to download the embedded artwork
+                ImageLoader.sharedLoader.imageForUrl(urlString: embeddedArtworkURL) { (image, stringURL) in
+                    guard let image = image else {
+                        self.resetArtwork(with: self.station);
+                        return
+                    }
+                    self.updateTrackArtwork(with: image, artworkLoaded: true)
+                    return
+                }
+            } else {
+                self.resetArtwork(with: station);
+                return
+            }
+            return
+        }
         
         ImageLoader.sharedLoader.imageForUrl(urlString: artworkURL.absoluteString) { (image, stringURL) in
-            guard let image = image else { self.resetArtwork(with: self.station); return }
+            guard let image = image else {
+                self.resetArtwork(with: self.station);
+                return
+            }
+            
             self.updateTrackArtwork(with: image, artworkLoaded: true)
         }
     }

@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2AB1495022D5949E00205629 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1494F22D5949E00205629 /* Environment.swift */; };
-		2C5545BD1C1124DE00728469 /* SwiftRadioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5545BC1C1124DE00728469 /* SwiftRadioUITests.swift */; };
+		2AB1495322D82A4600205629 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1495222D82A4600205629 /* DataManager.swift */; };
+		2AB1495522D82FF300205629 /* RadioLogik.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1495422D82FF300205629 /* RadioLogik.swift */; };
 		5F22BA3C1F72AD5A00CB5911 /* SpringLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F22BA1E1F72AD3700CB5911 /* SpringLabel.swift */; };
 		5F22BA3D1F72AD5A00CB5911 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F22BA1F1F72AD3900CB5911 /* BlurView.swift */; };
 		5F22BA3E1F72AD5A00CB5911 /* DesignableTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F22BA201F72AD3B00CB5911 /* DesignableTabBarController.swift */; };
@@ -56,23 +57,14 @@
 		CF72ACE721F7155200461EED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF72ACE621F714D000461EED /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		2C5545BF1C1124DE00728469 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9409E10E1ABF6FE900312E2B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9409E1151ABF6FEA00312E2B;
-			remoteInfo = SwiftRadio;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		2AB1493922D5899400205629 /* ReleaseNote.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ReleaseNote.txt; sourceTree = "<group>"; };
 		2AB1494C22D58F0E00205629 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		2AB1494D22D58F2400205629 /* Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
 		2AB1494E22D58F3C00205629 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		2AB1494F22D5949E00205629 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
-		2C5545BA1C1124DE00728469 /* DriveRockRadioRadioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DriveRockRadioRadioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AB1495222D82A4600205629 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		2AB1495422D82FF300205629 /* RadioLogik.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioLogik.swift; sourceTree = "<group>"; };
 		2C5545BC1C1124DE00728469 /* SwiftRadioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftRadioUITests.swift; sourceTree = "<group>"; };
 		2C5545BE1C1124DE00728469 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F22BA1E1F72AD3700CB5911 /* SpringLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringLabel.swift; sourceTree = "<group>"; };
@@ -128,13 +120,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2C5545B71C1124DE00728469 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9409E1131ABF6FEA00312E2B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -149,7 +134,6 @@
 			isa = PBXGroup;
 			children = (
 				94D260901B45D20000DE671C /* SwiftRadio-Settings.swift */,
-				9409E11A1ABF6FEA00312E2B /* Info.plist */,
 				2AB1494C22D58F0E00205629 /* Development.xcconfig */,
 				2AB1494D22D58F2400205629 /* Staging.xcconfig */,
 				2AB1494E22D58F3C00205629 /* Production.xcconfig */,
@@ -173,6 +157,14 @@
 				CAA8FDB42000614600050F77 /* RadioPlayer.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		2AB1495122D82A1400205629 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				2AB1495222D82A4600205629 /* DataManager.swift */,
+			);
+			name = Networking;
 			sourceTree = "<group>";
 		};
 		2C5545BB1C1124DE00728469 /* SwiftRadioUITests */ = {
@@ -233,6 +225,7 @@
 		9409E10D1ABF6FE900312E2B = {
 			isa = PBXGroup;
 			children = (
+				9409E11A1ABF6FEA00312E2B /* Info.plist */,
 				2AB1493922D5899400205629 /* ReleaseNote.txt */,
 				9409E1181ABF6FEA00312E2B /* SwiftRadio */,
 				2C5545BB1C1124DE00728469 /* SwiftRadioUITests */,
@@ -244,7 +237,6 @@
 			isa = PBXGroup;
 			children = (
 				9409E1161ABF6FEA00312E2B /* DriveRockRadio.app */,
-				2C5545BA1C1124DE00728469 /* DriveRockRadioRadioUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -252,6 +244,7 @@
 		9409E1181ABF6FEA00312E2B /* SwiftRadio */ = {
 			isa = PBXGroup;
 			children = (
+				2AB1495122D82A1400205629 /* Networking */,
 				2AB1494B22D58E8600205629 /* Controllers */,
 				2AB1494922D58DEA00205629 /* Configs */,
 				94E976191B1A8BFB00F52B1E /* Model */,
@@ -299,6 +292,7 @@
 			children = (
 				94AC70AD1AD05C6200652982 /* RadioStation.swift */,
 				94D260971B45E8B800DE671C /* Track.swift */,
+				2AB1495422D82FF300205629 /* RadioLogik.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -316,24 +310,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2C5545B91C1124DE00728469 /* DriveRockRadioRadioUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2C5545C31C1124DE00728469 /* Build configuration list for PBXNativeTarget "DriveRockRadioRadioUITests" */;
-			buildPhases = (
-				2C5545B61C1124DE00728469 /* Sources */,
-				2C5545B71C1124DE00728469 /* Frameworks */,
-				2C5545B81C1124DE00728469 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2C5545C01C1124DE00728469 /* PBXTargetDependency */,
-			);
-			name = DriveRockRadioRadioUITests;
-			productName = SwiftRadioUITests;
-			productReference = 2C5545BA1C1124DE00728469 /* DriveRockRadioRadioUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 		9409E1151ABF6FEA00312E2B /* DriveRockRadio */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9409E1381ABF6FEA00312E2B /* Build configuration list for PBXNativeTarget "DriveRockRadio" */;
@@ -359,21 +335,18 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = celsobarriga.com;
 				TargetAttributes = {
-					2C5545B91C1124DE00728469 = {
-						CreatedOnToolsVersion = 7.1;
-						LastSwiftMigration = 1020;
-						TestTargetID = 9409E1151ABF6FEA00312E2B;
-					};
 					9409E1151ABF6FEA00312E2B = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 6UD6TPYEJT;
 						LastSwiftMigration = 1020;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 0;
 							};
 						};
 					};
@@ -393,19 +366,11 @@
 			projectRoot = "";
 			targets = (
 				9409E1151ABF6FEA00312E2B /* DriveRockRadio */,
-				2C5545B91C1124DE00728469 /* DriveRockRadioRadioUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2C5545B81C1124DE00728469 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9409E1141ABF6FEA00312E2B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -419,14 +384,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2C5545B61C1124DE00728469 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2C5545BD1C1124DE00728469 /* SwiftRadioUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9409E1121ABF6FEA00312E2B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -457,6 +414,7 @@
 				5F22BA551F72AD5A00CB5911 /* AutoTextView.swift in Sources */,
 				94D260981B45E8B800DE671C /* Track.swift in Sources */,
 				5F22BA3F1F72AD5A00CB5911 /* LoadingView.swift in Sources */,
+				2AB1495522D82FF300205629 /* RadioLogik.swift in Sources */,
 				CAA8FDB52000614600050F77 /* RadioPlayer.swift in Sources */,
 				5F22BA4F1F72AD5A00CB5911 /* TransitionManager.swift in Sources */,
 				5F22BA531F72AD5A00CB5911 /* SpringAnimation.swift in Sources */,
@@ -472,20 +430,13 @@
 				81AD229B21646DEA002ADFDD /* FRadioPlayer.swift in Sources */,
 				5F22BA501F72AD5A00CB5911 /* Spring.swift in Sources */,
 				81AD229C21646DEA002ADFDD /* FRadioAPI.swift in Sources */,
+				2AB1495322D82A4600205629 /* DataManager.swift in Sources */,
 				94AC70AE1AD05C6200652982 /* RadioStation.swift in Sources */,
 				5F22BA481F72AD5A00CB5911 /* DesignableButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		2C5545C01C1124DE00728469 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9409E1151ABF6FEA00312E2B /* DriveRockRadio */;
-			targetProxy = 2C5545BF1C1124DE00728469 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		2AB1493A22D58B9600205629 /* Debug (Staging) */ = {
@@ -516,6 +467,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development: Celso Barriga (6E8GV35VGZ)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -547,16 +499,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2AB1494D22D58F2400205629 /* Staging.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconDev;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 6UD6TPYEJT;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SwiftRadio",
 				);
-				INFOPLIST_FILE = SwiftRadio/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -565,30 +518,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.celsobarriga.DriveRockRadio;
 				PRODUCT_NAME = DriveRockRadio;
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = "Debug (Staging)";
-		};
-		2AB1493C22D58B9600205629 /* Debug (Staging) */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2AB1494D22D58F2400205629 /* Staging.xcconfig */;
-			buildSettings = {
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = SwiftRadioUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = jonah.SwiftRadioUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = SwiftRadio;
-				USES_XCTRUNNER = YES;
 			};
 			name = "Debug (Staging)";
 		};
@@ -620,7 +553,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Celso Barriga (6E8GV35VGZ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -653,14 +587,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 6UD6TPYEJT;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SwiftRadio",
 				);
-				INFOPLIST_FILE = SwiftRadio/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -669,30 +604,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.celsobarriga.DriveRockRadio;
 				PRODUCT_NAME = DriveRockRadio;
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = "Debug (Production)";
-		};
-		2AB1494222D58BD400205629 /* Debug (Production) */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2AB1494E22D58F3C00205629 /* Production.xcconfig */;
-			buildSettings = {
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = SwiftRadioUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = jonah.SwiftRadioUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = SwiftRadio;
-				USES_XCTRUNNER = YES;
 			};
 			name = "Debug (Production)";
 		};
@@ -724,6 +639,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -749,16 +665,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2AB1494D22D58F2400205629 /* Staging.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconDev;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 6UD6TPYEJT;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SwiftRadio",
 				);
-				INFOPLIST_FILE = SwiftRadio/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -767,30 +684,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.celsobarriga.DriveRockRadio;
 				PRODUCT_NAME = DriveRockRadio;
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = "Release (Staging)";
-		};
-		2AB1494522D58BF900205629 /* Release (Staging) */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2AB1494D22D58F2400205629 /* Staging.xcconfig */;
-			buildSettings = {
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = SwiftRadioUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = jonah.SwiftRadioUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = SwiftRadio;
-				USES_XCTRUNNER = YES;
 			};
 			name = "Release (Staging)";
 		};
@@ -822,7 +719,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Celso Barriga (6E8GV35VGZ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -849,14 +747,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 6UD6TPYEJT;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SwiftRadio",
 				);
-				INFOPLIST_FILE = SwiftRadio/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -865,74 +764,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.celsobarriga.DriveRockRadio;
 				PRODUCT_NAME = DriveRockRadio;
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = "Release (Production)";
-		};
-		2AB1494822D58C0600205629 /* Release (Production) */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2AB1494E22D58F3C00205629 /* Production.xcconfig */;
-			buildSettings = {
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = SwiftRadioUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = jonah.SwiftRadioUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = SwiftRadio;
-				USES_XCTRUNNER = YES;
-			};
-			name = "Release (Production)";
-		};
-		2C5545C11C1124DE00728469 /* Debug (Development) */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2AB1494C22D58F0E00205629 /* Development.xcconfig */;
-			buildSettings = {
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = SwiftRadioUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = jonah.SwiftRadioUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = SwiftRadio;
-				USES_XCTRUNNER = YES;
-			};
-			name = "Debug (Development)";
-		};
-		2C5545C21C1124DE00728469 /* Release (Development) */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2AB1494C22D58F0E00205629 /* Development.xcconfig */;
-			buildSettings = {
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = SwiftRadioUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = jonah.SwiftRadioUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = SwiftRadio;
-				USES_XCTRUNNER = YES;
-			};
-			name = "Release (Development)";
 		};
 		9409E1361ABF6FEA00312E2B /* Debug (Development) */ = {
 			isa = XCBuildConfiguration;
@@ -962,7 +799,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Celso Barriga (6E8GV35VGZ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Celso Barriga (6E8GV35VGZ)";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -1017,10 +855,12 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1031,6 +871,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -1042,16 +883,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2AB1494C22D58F0E00205629 /* Development.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconDev;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 6UD6TPYEJT;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SwiftRadio",
 				);
-				INFOPLIST_FILE = SwiftRadio/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1060,6 +902,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.celsobarriga.DriveRockRadio;
 				PRODUCT_NAME = DriveRockRadio;
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1070,16 +913,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2AB1494C22D58F0E00205629 /* Development.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconDev;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 6UD6TPYEJT;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SwiftRadio",
 				);
-				INFOPLIST_FILE = SwiftRadio/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1088,6 +932,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.celsobarriga.DriveRockRadio;
 				PRODUCT_NAME = DriveRockRadio;
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1097,19 +942,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2C5545C31C1124DE00728469 /* Build configuration list for PBXNativeTarget "DriveRockRadioRadioUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2C5545C11C1124DE00728469 /* Debug (Development) */,
-				2AB1493C22D58B9600205629 /* Debug (Staging) */,
-				2AB1494222D58BD400205629 /* Debug (Production) */,
-				2C5545C21C1124DE00728469 /* Release (Development) */,
-				2AB1494522D58BF900205629 /* Release (Staging) */,
-				2AB1494822D58C0600205629 /* Release (Production) */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Release (Development)";
-		};
 		9409E1111ABF6FE900312E2B /* Build configuration list for PBXProject "DriveRockRadio" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -1,0 +1,6 @@
+1.1.0
+- Updated to the latest toolset, lots of internal cleanup
+- Be nice and don't auto-play when launched
+- It is now iPad native
+- will now fetch default album art from web
+

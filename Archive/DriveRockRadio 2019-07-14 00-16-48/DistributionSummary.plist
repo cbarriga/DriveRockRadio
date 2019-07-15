@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>DriveRockRadio.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>arm64</string>
+			</array>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>EBA244B9F8C1933817C42C5E422F912AAABA1F0C</string>
+				<key>dateExpires</key>
+				<string>7/12/20</string>
+				<key>type</key>
+				<string>iOS Distribution</string>
+			</dict>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>6UD6TPYEJT.com.celsobarriga.DriveRockRadio</string>
+				<key>com.apple.developer.team-identifier</key>
+				<string>6UD6TPYEJT</string>
+				<key>get-task-allow</key>
+				<false/>
+				<key>keychain-access-groups</key>
+				<array>
+					<string>6UD6TPYEJT.com.celsobarriga.DriveRockRadio</string>
+				</array>
+			</dict>
+			<key>name</key>
+			<string>DriveRockRadio.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>09680bf5-659b-4776-8874-be7dd1e5a67f</string>
+				<key>name</key>
+				<string>iOS Team Ad Hoc Provisioning Profile: com.celsobarriga.DriveRockRadio</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>6UD6TPYEJT</string>
+				<key>name</key>
+				<string>Celso Barriga</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
