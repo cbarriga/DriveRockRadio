@@ -13,7 +13,7 @@ import Foundation
 //**************************************
 
 // Display Comments
-let kDebugLog = true
+let kDebugLog = false
 
 let stationDataURL = "https://www.driverockradio.com/wp-content/uploads/radiologik/nowplaying.json"
 let embeddedArtworkURL = "https://www.driverockradio.com/wp-content/uploads/radiologik/art-00.jpg"
