@@ -38,6 +38,16 @@
                ReferencedContainer = "container:DriveRockRadio.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2A39DAB322DD3BE500F222A9"
+               BuildableName = "DriveRockRadioUITests.xctest"
+               BlueprintName = "DriveRockRadioUITests"
+               ReferencedContainer = "container:DriveRockRadio.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
