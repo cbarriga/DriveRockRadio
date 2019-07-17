@@ -116,7 +116,7 @@
 		81AD229921646DEA002ADFDD /* FRadioAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FRadioAPI.swift; sourceTree = "<group>"; };
 		81AD229A21646DEA002ADFDD /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		9409E1161ABF6FEA00312E2B /* DriveRockRadio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DriveRockRadio.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		9409E11A1ABF6FEA00312E2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9409E11A1ABF6FEA00312E2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "/Users/cbarriga/Developer/Drive-Rock-Radio/Info.plist"; sourceTree = "<absolute>"; };
 		9409E11B1ABF6FEA00312E2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9409E1251ABF6FEA00312E2B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9409E13F1ABF78B000312E2B /* NowPlayingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NowPlayingViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +163,7 @@
 		2AB1494922D58DEA00205629 /* Configs */ = {
 			isa = PBXGroup;
 			children = (
+				9409E11A1ABF6FEA00312E2B /* Info.plist */,
 				94D260901B45D20000DE671C /* SwiftRadio-Settings.swift */,
 				2AB1494C22D58F0E00205629 /* Development.xcconfig */,
 				2AB1494D22D58F2400205629 /* Staging.xcconfig */,
@@ -255,7 +256,6 @@
 		9409E10D1ABF6FE900312E2B = {
 			isa = PBXGroup;
 			children = (
-				9409E11A1ABF6FEA00312E2B /* Info.plist */,
 				2AB1493922D5899400205629 /* ReleaseNote.txt */,
 				9409E1181ABF6FEA00312E2B /* SwiftRadio */,
 				2C5545BB1C1124DE00728469 /* SwiftRadioUITests */,
