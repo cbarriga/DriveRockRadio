@@ -136,7 +136,8 @@ extension RadioPlayer: FRadioPlayerDelegate {
     func radioPlayer(_ player: FRadioPlayer, artworkDidChange artworkURL: URL?) {
         guard let artworkURL = artworkURL else {
             if player.isPlaying {
-                // Try to download the embedded artwork
+                // Try to download the embedded artwork from DRR website.
+                // This is only when played from outside of centova
                 ImageLoader.sharedLoader.imageForUrl(urlString: embeddedArtworkURL) { (image, stringURL) in
                     guard let image = image else {
                         self.resetArtwork(with: self.station);
